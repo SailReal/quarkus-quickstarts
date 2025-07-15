@@ -44,7 +44,7 @@
   "maxDeltaTimeSeconds" : 43200,
   "failureFactor" : 30,
   "roles" : {
-    "realm" : [ 
+    "realm" : [
      {
       "id" : "3fc80564-13ac-4e7b-9986-322f571e82bc",
       "name" : "confidential",
@@ -600,7 +600,7 @@
           "attributes": {},
           "_id": "df1b74a9-3f10-499d-a581-368de48e512b",
           "uris": [
-            "/api/users/*"
+            "/api/keycloak/version/*"
           ]
         },
         {
@@ -609,7 +609,7 @@
           "attributes": {},
           "_id": "7124e2f1-e6dc-44b4-87ab-24b010090b97",
           "uris": [
-            "/api/admin/*"
+            "/api/keycloak/version/*"
           ]
         }
       ],
@@ -1997,7 +1997,17 @@
     "realmRoles" : [ "confidential", "user" ],
     "notBefore" : 0,
     "groups" : [ ]
-  }],
+  },
+    {
+      "username": "system",
+      "email": "system@localhost",
+      "enabled": true,
+      "serviceAccountClientId": "backend-service",
+      "clientRoles" : {
+        "realm-management" : [ "realm-admin" ]
+      }
+    }
+  ],
   "keycloakVersion" : "19.0.1",
   "userManagedAccessAllowed" : false,
   "clientProfiles" : {
